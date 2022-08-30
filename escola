@@ -1,0 +1,25 @@
+create database escola;
+
+default character set utf8
+default collate utf8_general_ci;
+
+use escola;
+create table aluno( 
+  idaluno int not null auto_increment,
+  nome varchar (80) not null,
+  sexo char (1) not null,
+  cidade varchar (50),
+  data_nascimento varchar(15) not null,
+  telefone varchar(20),
+  primary key (idaluno)
+);
+
+insert into Aluno(nome, sexo, cidade, data_nascimento, telefone)
+values 
+("Kely Soares", "F", "Pedro II", "31-12-2000", "86999608988"),
+(" Maria Alves","F", "Pedro II","02-04-1999","86998760018"),
+("Jose Araujo","M", "Pedro II", "09-10-2000", "86994490876"),
+("Arthut Gabriel", "M", "Pedro II", "27-12-1998","86998174398"),
+("Marcia Hilda","F", "Pedro II", "30-03-1998", "86994387622");
+
+select * from aluno;
